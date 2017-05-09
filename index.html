@@ -1,0 +1,26 @@
+---
+---
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{% include meta.html %}
+</head>
+
+<body>
+<div class="header">
+    {% include header.html %}
+</div>
+<div class="content">
+    <ul>
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="footer"></div>
+    {% include footer.html %}
+</script>
+</body>
+</html>
