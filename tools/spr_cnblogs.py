@@ -57,7 +57,22 @@ def downloadPage(urlList):
         ## 转义liquid标签
         body = re.sub(r"(\{%.*?%\})", r"{% raw %}\1{% endraw %}", body)
         body = re.sub(r"(\{\{.*?\}\})", r"{% raw %}\1{% endraw %}", body)
-
+        
+        # category
+        category = tag
+        if 'C++ Primer' in tag or u'PHP速学' in tag or 'Linux Shell' in tag \
+                or  u'算法导论' in tag:
+            category = u'学习日志'
+        elif u'Windows声音' in tag:
+            category = 'Windows'
+        elif 'Linux' in tag or 'raspberry-pi' in tag:
+            category = 'Linux'
+        elif 'C++' in tag:
+            category = u'程序设计'
+        elif 'Android' in tag:
+            category = u'移动设计'
+        elif u'神经网络' in tag:
+            category = u'机器学习'
         #print body
         print title
         print date
@@ -67,12 +82,12 @@ def downloadPage(urlList):
 layout: post
 title:  "%s"
 date:   %s +0800
-categories: %s
-tag:    %s
+category: %s
+tags:   %s
 from:   %s
 ---
 %s
-""" % (title, date, tag.replace(" ", "_"), tag.replace(" ", "_"), article, body)
+""" % (title, date, category, tag.replace(" ", "_"), article, body)
         filename = "/home/pi/project/gotochenglong.github.io/_posts/%s-%s.md" % (date[0:10], title.replace(" ", "-"))
         saveTo(filename, head.encode('utf-8'))
         #print head

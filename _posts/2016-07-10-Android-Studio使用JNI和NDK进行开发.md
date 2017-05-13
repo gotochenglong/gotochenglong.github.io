@@ -2,8 +2,8 @@
 layout: post
 title:  "Android Studio使用JNI和NDK进行开发"
 date:   2016-07-10 22:41 +0800
-categories: Android
-tag:    Android
+category: 移动设计
+tags:   Android
 from:   http://www.cnblogs.com/qiusuo/p/5656625.html
 ---
 <p><span style="line-height: 1.5;">想要学习一下在Android Studio中进行JNI的开发，文章挺多的，但是几乎没有一个完整的说明的，中间总是有一两步漏掉。分享技术就应该完整的让读者学会，藏着掖着不是君子所为。对于那些故意含糊过去的，我只想说Navie!</span></p>

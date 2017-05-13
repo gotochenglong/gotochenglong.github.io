@@ -2,8 +2,8 @@
 layout: post
 title:  "使用WindowsAPI获取录音音频"
 date:   2014-08-17 14:11 +0800
-categories: Windows声音
-tag:    Windows声音
+category: Windows
+tags:   Windows声音
 from:   http://www.cnblogs.com/qiusuo/p/3917617.html
 ---
 <p><span style="line-height: 1.5;">介绍使用winmm.h进行音频流的获取</span></p>

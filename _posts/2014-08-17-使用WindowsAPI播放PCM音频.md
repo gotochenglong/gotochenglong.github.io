@@ -2,8 +2,8 @@
 layout: post
 title:  "使用WindowsAPI播放PCM音频"
 date:   2014-08-17 16:29 +0800
-categories: Windows声音
-tag:    Windows声音
+category: Windows
+tags:   Windows声音
 from:   http://www.cnblogs.com/qiusuo/p/3917910.html
 ---
 <p>这一篇文章同上一篇《<a id="cb_post_title_url" href="http://www.cnblogs.com/qiusuo/p/3917617.html">使用WindowsAPI获取录音音频</a>》原理具有相似之处，不再详细介绍函数与结构体的参数</p>
