@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>我和你</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,minimal-ui">
+      <link rel="shortcut icon" href="http://home.9first.com/favicon.ico">
+      <link rel="stylesheet" href="./src/css/style.css">
+      <link rel="stylesheet" href="./src/css/snow.css">
+
+      <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
+      <!-- <bgsound src="./src/music/background.mp3" autoplay=true autostart=true loop="-1">
+      <embed src="./src/music/background.mp3" autostart="true" loop="true" hidden="true"></embed> -->
+      <audio id="yy" autoplay preload src="./src/music/background.mp3" loop></audio>
+
+      <style>
+		body{padding:0;margin:0;width:100%;height:100%;;overflow:hidden;}
+		html{padding:0;margin:0;width:100%;height:100%;;overflow:hidden;}
+
+        @font-face {
+             font-family:'zaozigongfangtongxin';
+              src:url('src/font/font.eot');
+              src:url('src/font/font.eot?#iefix')format('embedded-opentype'),
+               url('src/font/font.woff')format('woff'),
+               url('src/font/font.ttf')format('truetype'),
+               url('../fonts/font.svg#NeuesBauenDemo')format('svg');
+              font-weight:normal;
+              font-style:normal;
+            }
+
+	 </style>
+  </head>
+
+  <body background="./images/background.png">
+
+	<div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide gra_1">
+              <img src="./images/1.png">
+              <div class="btn-down">
+                  <div class="btn-down-arraw"><img src="./images/btn-next.png"></div>
+              </div>
+              <div class="subhead"><span class="page-text2">2018</span><span class="page-text1" id="name">王二口</span><span class="page-text2">的情人节</span></div>
+              <div class="lookover">
+                  <img class="look" src="./images/lookover.png" alt="">
+              </div>
+              <div class="bottomBtn" onclick="openApp()">我的爱情</div>
+            </div>
+
+            <canvas id="canvas" style="position: absolute;top: 736px;z-index: 9999;left: 0px;">
+            </canvas>
+            <div class="swiper-slide gra_2">
+              <img src="./images/2.png" alt="">
+              <div class="subhead8">
+				  <span class="page-text1" id="name2">王二口</span><span class="page-text2">相遇</span>
+				  <br>
+				  <span class="page-text1">在教室中间的座位上</span>
+				  <br>
+				  <span class="page-text1">我们自报家门</span>
+				  <br>
+				  <span class="page-text1">错过了就是一辈子</span>
+			  </div>
+              <div class="btn-down" style="z-index: 66">
+                  <div class="btn-down-arraw"><img src="./images/btn-next.png"></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide gra_3">
+              <img src="./images/3.png" alt="">
+              <div class="subhead2 page-text3">嗯？这是个啥？</div>
+
+              <div class="btn-down">
+                  <div class="btn-down-arraw"><img src="./images/btn-next.png"></div>
+              </div>
+            </div>
+
+            <div class="swiper-slide gra_4">
+              <img src="./images/4.png" alt="">
+              <div class="subhead8"><span class="page-text3" id="name6">未来很长，仍需努力</span></div>
+              <div id="slogen" class="subhead2 page-text1">date</div>
+
+              <div class="btn-down">
+                  <div class="btn-down-arraw"><img src="./images/btn-next.png"></div>
+              </div>
+              <div class="snow-container">
+          			<div class="snow foreground"></div>
+          			<div class="snow foreground layered"></div>
+          			<div class="snow middleground"></div>
+          			<div class="snow middleground layered"></div>
+          			<div class="snow background"></div>
+          			<div class="snow background layered"></div>
+          	</div>
+            </div>
+
+            <div class="swiper-slide gra_5">
+              <img src="./images/6.png" alt="">
+              <div class="regretText2">2018 一切都很新鲜！</div>
+            </div>
+
+        <div class="music" onclick="suspendPlayAudio()">
+            <img class="music-icon" src="./images/music.png"/>
+        </div>
+
+    <script src="./src/js/lms.js"></script>
+    <script src="./dest/js/libs.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script>
+
+
+       var bjyy=document.getElementById("yy");
+       var flag = true;
+
+        function autoPlayAudio(){
+            wx.config({
+                debug: false
+            });
+            wx.ready(function() {
+                bjyy.play();
+            });
+        }
+
+        function suspendPlayAudio(){
+            if(flag){
+                bjyy.pause();
+                $('.music-icon').attr("src",'./images/music_stop.png');
+                flag = false;
+            }else {
+                bjyy.play();
+                $('.music-icon').attr("src",'./images/music.png');
+                flag = true;
+            }
+        }
+
+        autoPlayAudio();
+
+    </script>
+	<script type="text/javascript">
+	    function show_student_time(){ 
+	        window.setTimeout("show_student_time()", 1000); 
+	        BirthDay = new Date("2014/09/16 11:50");
+	        today = new Date(); 
+	        timediff = today.getTime() - BirthDay.getTime(); 
+	        sectimediff = timediff / 1000;
+	        secondsold = Math.floor(sectimediff); 
+	        msPerDay = 24 * 60 * 60 * 1000;
+	        e_daysold = timediff / msPerDay;
+	        daysold = Math.floor(e_daysold); 
+	        e_hrsold = (e_daysold-daysold) * 24; 
+	        hrsold = Math.floor(e_hrsold); 
+	        e_minsold = (e_hrsold-hrsold) * 60; 
+	        minsold = Math.floor((e_hrsold - hrsold) * 60); 
+	        seconds = Math.floor((e_minsold - minsold) * 60); 
+	        slogen.innerHTML = '相识' + daysold + '天' + hrsold +
+	            '小时' + minsold + '分' + seconds + '秒';
+	    } 
+	    show_student_time(); 
+	</script>
+  </body>
+  </html>
