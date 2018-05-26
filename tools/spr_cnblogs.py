@@ -3,7 +3,7 @@
 # Author: Wang Chenglong
 # E-mail: gotochenglong@gmail.com
 # Date: 2017-05-09 19:12:23
-#coding=utf-8
+
 import re
 import urllib
 import json
