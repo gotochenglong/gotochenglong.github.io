@@ -120,7 +120,12 @@
                 <div class="feidian"></div>
             </div>
         </div>
-        
+       
+        <audio src="./valentine_day_2019_files/love.mp3" id="audio" loop="true"></audio>
+        <script src="./valentine_day_2019_files/config.1190735.min.js"></script>
+        <script src="./valentine_day_2019_files/dada_valentines2016.1191166.min.js"></script>
+        <div id="forTap" style="color: White;opacity:0;border-radius: 60px; position: absolute; z-index: 99999; width: 60px; height: 60px;left:-999px;top:-999px;"></div>
+         
 <script type="text/javascript">
     function show_student_time(){ 
         window.setTimeout("show_student_time()", 1000); 
@@ -141,10 +146,15 @@
             '小时' + minsold + '分' + seconds + '秒<br>祝我们好！';
     } 
     show_student_time(); 
+    // 兼容safari
+    var Audio=document.getElementsByTagName("audio")[0];
+    var voiceStatu = true;
+    document.addEventListener("touchstart",function(e){
+        if(voiceStatu){
+            Audio.play();
+            voiceStatu = false;
+        }
+    }, false);
 </script>
-        <audio src="./valentine_day_2019_files/love.mp3" id="audio" loop="true"></audio>
-        <script src="./valentine_day_2019_files/config.1190735.min.js"></script>
-        <script src="./valentine_day_2019_files/dada_valentines2016.1191166.min.js"></script>
-        <div id="forTap" style="color: White;opacity:0;border-radius: 60px; position: absolute; z-index: 99999; width: 60px; height: 60px;left:-999px;top:-999px;"></div>
     </body>
 </html>
